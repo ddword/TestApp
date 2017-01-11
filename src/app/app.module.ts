@@ -2,18 +2,18 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { SignUpPage } from '../pages/signup/signup';
-import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
+import { VideoPage } from '../pages/video/video';
 import { TabsPage } from '../pages/tabs/tabs';
+
+import { YoutubeService } from'../providers/youtube-service';
 
 @NgModule({
   declarations: [
     MyApp,
     SignUpPage,
-    AboutPage,
     ContactPage,
-    HomePage,
+    VideoPage,
     TabsPage
   ],
   imports: [
@@ -23,9 +23,8 @@ import { TabsPage } from '../pages/tabs/tabs';
   entryComponents: [
     MyApp,
     SignUpPage,
-    AboutPage,
     ContactPage,
-    HomePage,
+    VideoPage,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
